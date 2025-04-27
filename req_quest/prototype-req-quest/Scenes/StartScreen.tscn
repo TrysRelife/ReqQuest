@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3 uid="uid://epv6roode07o"]
+
+[ext_resource type="Script" uid="uid://dp1v30xadbqfd" path="res://Scripts/StartScreen.gd" id="1_0on6r"]
+[ext_resource type="Texture2D" uid="uid://6a4q65kirko6" path="res://Assets/logo_final.png" id="1_ko4ly"]
+[ext_resource type="Texture2D" uid="uid://cnqegkwt2tkn5" path="res://Assets/background_title_screen.png" id="2_usjih"]
+[ext_resource type="Texture2D" uid="uid://msa23l1op2lw" path="res://Assets/start_button.png" id="4_3u666"]
+
+[node name="StartScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0on6r")
+
+[node name="ColorRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -152.0
+offset_right = 152.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_usjih")
+
+[node name="MainContent" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LogoLayout" type="VBoxContainer" parent="MainContent"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Logo" type="TextureRect" parent="MainContent/LogoLayout"]
+layout_mode = 2
+texture = ExtResource("1_ko4ly")
+stretch_mode = 5
+
+[node name="StartButtonLayout" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -426.0
+offset_top = -603.0
+offset_right = 425.0
+offset_bottom = -130.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.64, 0.599995)
+pivot_offset = Vector2(423.5, 231)
+
+[node name="StartButton" type="TextureButton" parent="StartButtonLayout"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("4_3u666")
+stretch_mode = 3

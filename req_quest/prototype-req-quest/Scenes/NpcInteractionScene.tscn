@@ -1,0 +1,93 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4wqt4c6xl51d"]
+
+[ext_resource type="Script" uid="uid://c1ldludy3tqag" path="res://Scripts/NpcInteractionScene.gd" id="1_0xpvx"]
+[ext_resource type="Texture2D" uid="uid://dvstg4w3iedns" path="res://Assets/quest_list_background.png" id="2_hroro"]
+
+[sub_resource type="SystemFont" id="SystemFont_cn68s"]
+
+[node name="InteractionScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0xpvx")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_hroro")
+expand_mode = 4
+
+[node name="MainMargin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 204
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 20
+
+[node name="VerticalLayout" type="VBoxContainer" parent="MainMargin"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="NpcInfoBar" type="VBoxContainer" parent="MainMargin/VerticalLayout"]
+layout_mode = 2
+alignment = 1
+
+[node name="NpcNameLabel" type="Label" parent="MainMargin/VerticalLayout/NpcInfoBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.450571, 0.290707, 0.0228394, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_fonts/font = SubResource("SystemFont_cn68s")
+theme_override_font_sizes/font_size = 59
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="NpcAvatar" type="TextureRect" parent="MainMargin/VerticalLayout/NpcInfoBar"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="InteractionPanel" type="PanelContainer" parent="MainMargin/VerticalLayout"]
+layout_mode = 2
+
+[node name="PanelVBox" type="VBoxContainer" parent="MainMargin/VerticalLayout/InteractionPanel"]
+layout_mode = 2
+
+[node name="InteractionText" type="Label" parent="MainMargin/VerticalLayout/InteractionPanel/PanelVBox"]
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="OptionsContainer" type="VBoxContainer" parent="MainMargin/VerticalLayout/InteractionPanel/PanelVBox"]
+layout_mode = 2
+
+[node name="OptionButton1" type="Button" parent="MainMargin/VerticalLayout/InteractionPanel/PanelVBox/OptionsContainer"]
+layout_mode = 2
+
+[node name="OptionButton2" type="Button" parent="MainMargin/VerticalLayout/InteractionPanel/PanelVBox/OptionsContainer"]
+layout_mode = 2
+
+[node name="OptionButton3" type="Button" parent="MainMargin/VerticalLayout/InteractionPanel/PanelVBox/OptionsContainer"]
+layout_mode = 2
+
+[node name="ContinueButton" type="Button" parent="MainMargin/VerticalLayout"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+disabled = true
+text = "Continue"
+flat = true
