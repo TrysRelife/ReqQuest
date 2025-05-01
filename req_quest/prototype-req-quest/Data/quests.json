@@ -1,146 +1,146 @@
 {
   "quests": [
-    {
-      "id": "the_wizards_spellbook",
-      "title": "The Wizard's Spellbook",
-      "topic": "Functional Requirements",
-      "difficulty": "Easy",
-      "cost": 0,
-      "reward_coins": 50,
-      "npcs": [
-        {
-          "name": "Wizard Aldric",
-          "role": "Client",
-          "image": "res://Assets/NPCs/wizard.png" 
-        },
-        {
-          "name": "Elara the Apprentice",
-          "role": "Developer",
-          "image": "res://Assets/NPCs/apprentice.png" 
-        },
-        {
-          "name": "Ignis the Hatchling",
-          "role": "Tester",
-          "image": "res://Assets/NPCs/dragon.png" 
-        }
-      ],
-      "interactions": [ 
-        {
-          "npc_role": "Client",
-          "type": "dialogue",
-          "text": "Wizard Aldric: Ah, there you are! I need a digital spellbook. First and foremost, it must allow me to... hmm... list my spells."
-        },
-        {
-          "npc_role": "Client", 
-          "type": "question",
-          "text": "Wizard Aldric: To be useful, this spellbook MUST allow searching for a spell by its name. Is this a functional or non-functional requirement?",
-          "options": [ "Functional...", "Non-Functional...", "A technical constraint..." ],
-          "correct_index": 0,
-          "points": 15
-        },
-        {
-          "npc_role": "Developer", 
-          "type": "question",
-          "text": "Elara the Apprentice: Noted! But the Wizard also wants to add newly discovered spells. Which core system capability does this primarily involve?",
-          "options": [ "Displaying existing spell details", "Saving the user's window layout", "Creating and editing spell data"],
-          "correct_index": 2,
-          "points": 20
-        },
-        {
-            "npc_role": "Tester", 
-            "type": "dialogue",
-            "text": "Ignis the Hatchling: *Puffs a small flame* Squeak! What if I try to search for a spell that doesn't exist? We need to check that!"
-        }
-      ]
-    },
-    {
-      "id": "ninja_stealth_mode",
-      "title": "Ninja Stealth Mode",
-      "topic": "Security Requirements",
-      "difficulty": "Easy",
-      "cost": 10,
-      "reward_coins": 60,
-      "npcs": [
-        { "name": "Kage the Ninja", "role": "User", "image": "res://Assets/NPCs/ninja.png" },
-        { "name": "Master Ishikawa", "role": "IT Admin", "image": "res://Assets/NPCs/sensei.png" },
-        { "name": "Jin the Ronin Coder", "role": "Developer", "image": "res://Assets/NPCs/ronin.png" }
-      ],
-      "interactions": [
-        {
-          "npc_role": "User",
-          "type": "dialogue",
-          "text": "Kage the Ninja: My plans must remain unseen..."
-        }
-      ]
-    },
-    {
-      "id": "castle_siege_defense",
-      "title": "Castle Siege Defense",
-      "topic": "Cross-Functional Coordination",
-      "difficulty": "Medium",
-      "cost": 75,
-      "reward_coins": 150,
-      "npcs": [
-        { "name": "Knight Commander", "role": "Client", "image": "res://Assets/NPCs/knight_commander.png" },
-        { "name": "Lead Archer", "role": "Developer", "image": "res://Assets/NPCs/lead_archer.png" },
-        { "name": "Master Blacksmith", "role": "Tester", "image": "res://Assets/NPCs/master_blacksmith.png" },
-        { "name": "Siege Wizard", "role": "Architect", "image": "res://Assets/NPCs/siege_wizard.png" },
-        { "name": "Castle Spy", "role": "Stakeholder", "image": "res://Assets/NPCs/castle_spy.png" }
-      ],
-      "interactions": [
-        {
-          "npc_role":"Client",
-          "type": "dialogue",
-          "text":"Commander: The walls must hold! What are your proposals?"
-        }
-      ]
-    },
-    {
-      "id": "pirate_ship_navigation",
-      "title": "Pirate Ship Navigation",
-      "topic": "System Integration",
-      "difficulty": "Medium",
-      "cost": 100,
-      "reward_coins": 200,
-      "npcs": [
-        { "name": "Captain 'Storm' Rider", "role": "Client", "image": "res://Assets/NPCs/captain_storm_rider.png" },
-        { "name": "Star Navigator", "role": "Developer", "image": "res://Assets/NPCs/star_navigator.png" },
-        { "name": "Old Sailor", "role": "Tester", "image": "res://Assets/NPCs/old_sailor.png" },
-        { "name": "Royal Cartographer", "role": "Analyst", "image": "res://Assets/NPCs/royal_cartographer.png" },
-        { "name": "The Kraken", "role": "Risk", "image": "res://Assets/NPCs/the_kraken.png" }
-      ],
-      "interactions": [ 
-        {
-          "npc_role":"Client",
-          "type": "dialogue",
-          "text":"Captain: We need to reach the treasure before the Royal Navy! Show me the charts!"
-        }
-      ]
-    },
-    {
-      "id": "galactic_empire_compliance",
-      "title": "Galactic Empire Compliance",
-      "topic": "Interstellar Regulations",
-      "difficulty": "High",
-      "cost": 250,
-      "reward_coins": 500,
-      "npcs": [
-         { "name": "Galactic Emperor", "role": "Client", "image": "res://Assets/NPCs/galactic_emperor.png" },
-         { "name": "Order Architect", "role": "Architect", "image": "res://Assets/NPCs/order_architect.png" },
-         { "name": "Imperial Auditor", "role": "Auditor", "image": "res://Assets/NPCs/imperial_auditor.png" },
-         { "name": "Alien Diplomat", "role": "Stakeholder", "image": "res://Assets/NPCs/alien_diplomat.png" },
-         { "name": "Freelance Smuggler", "role": "Vendor", "image": "res://Assets/NPCs/freelance_smuggler.png" },
-         { "name": "Protocol Droid", "role": "Developer", "image": "res://Assets/NPCs/protocol_droid.png" },
-         { "name": "Empire Trooper", "role": "Tester", "image": "res://Assets/NPCs/empire_trooper.png" },
-         { "name": "Furry Co-Pilot", "role": "User", "image": "res://Assets/NPCs/furry_co-pilot.png" }
-       ],
-      "interactions": [
-        {
-           "npc_role":"Client",
-           "type": "dialogue",
-           "text":"Emperor: This new regulation MUST be implemented across all systems. Ensure compliance."
-        }
-      ]
-    }
+	{
+	  "id": "the_wizards_spellbook",
+	  "title": "The Wizard's Spellbook",
+	  "topic": "Functional Requirements",
+	  "difficulty": "Easy",
+	  "cost": 0,
+	  "reward_coins": 50,
+	  "npcs": [
+		{
+		  "name": "Wizard Aldric",
+		  "role": "Client",
+		  "image": "res://Assets/NPCs/wizard.png" 
+		},
+		{
+		  "name": "Elara the Apprentice",
+		  "role": "Developer",
+		  "image": "res://Assets/NPCs/apprentice.png" 
+		},
+		{
+		  "name": "Ignis the Hatchling",
+		  "role": "Tester",
+		  "image": "res://Assets/NPCs/dragon.png" 
+		}
+	  ],
+	  "interactions": [ 
+		{
+		  "npc_role": "Client",
+		  "type": "dialogue",
+		  "text": "Wizard Aldric: Ah, there you are! I need a digital spellbook. First and foremost, it must allow me to... hmm... list my spells."
+		},
+		{
+		  "npc_role": "Client", 
+		  "type": "question",
+		  "text": "Wizard Aldric: To be useful, this spellbook MUST allow searching for a spell by its name. Is this a functional or non-functional requirement?",
+		  "options": [ "Functional...", "Non-Functional...", "A technical constraint..." ],
+		  "correct_index": 0,
+		  "points": 15
+		},
+		{
+		  "npc_role": "Developer", 
+		  "type": "question",
+		  "text": "Elara the Apprentice: Noted! But the Wizard also wants to add newly discovered spells. Which core system capability does this primarily involve?",
+		  "options": [ "Displaying existing spell details", "Saving the user's window layout", "Creating and editing spell data"],
+		  "correct_index": 2,
+		  "points": 20
+		},
+		{
+			"npc_role": "Tester", 
+			"type": "dialogue",
+			"text": "Ignis the Hatchling: *Puffs a small flame* Squeak! What if I try to search for a spell that doesn't exist? We need to check that!"
+		}
+	  ]
+	},
+	{
+	  "id": "ninja_stealth_mode",
+	  "title": "Ninja Stealth Mode",
+	  "topic": "Security Requirements",
+	  "difficulty": "Easy",
+	  "cost": 10,
+	  "reward_coins": 60,
+	  "npcs": [
+		{ "name": "Kage the Ninja", "role": "User", "image": "res://Assets/NPCs/ninja.png" },
+		{ "name": "Master Ishikawa", "role": "IT Admin", "image": "res://Assets/NPCs/sensei.png" },
+		{ "name": "Jin the Ronin Coder", "role": "Developer", "image": "res://Assets/NPCs/ronin.png" }
+	  ],
+	  "interactions": [
+		{
+		  "npc_role": "User",
+		  "type": "dialogue",
+		  "text": "Kage the Ninja: My plans must remain unseen..."
+		}
+	  ]
+	},
+	{
+	  "id": "castle_siege_defense",
+	  "title": "Castle Siege Defense",
+	  "topic": "Cross-Functional Coordination",
+	  "difficulty": "Medium",
+	  "cost": 75,
+	  "reward_coins": 150,
+	  "npcs": [
+		{ "name": "Knight Commander", "role": "Client", "image": "res://Assets/NPCs/knight_commander.png" },
+		{ "name": "Lead Archer", "role": "Developer", "image": "res://Assets/NPCs/lead_archer.png" },
+		{ "name": "Master Blacksmith", "role": "Tester", "image": "res://Assets/NPCs/master_blacksmith.png" },
+		{ "name": "Siege Wizard", "role": "Architect", "image": "res://Assets/NPCs/siege_wizard.png" },
+		{ "name": "Castle Spy", "role": "Stakeholder", "image": "res://Assets/NPCs/castle_spy.png" }
+	  ],
+	  "interactions": [
+		{
+		  "npc_role":"Client",
+		  "type": "dialogue",
+		  "text":"Commander: The walls must hold! What are your proposals?"
+		}
+	  ]
+	},
+	{
+	  "id": "pirate_ship_navigation",
+	  "title": "Pirate Ship Navigation",
+	  "topic": "System Integration",
+	  "difficulty": "Medium",
+	  "cost": 100,
+	  "reward_coins": 200,
+	  "npcs": [
+		{ "name": "Captain 'Storm' Rider", "role": "Client", "image": "res://Assets/NPCs/captain_storm_rider.png" },
+		{ "name": "Star Navigator", "role": "Developer", "image": "res://Assets/NPCs/star_navigator.png" },
+		{ "name": "Old Sailor", "role": "Tester", "image": "res://Assets/NPCs/old_sailor.png" },
+		{ "name": "Royal Cartographer", "role": "Analyst", "image": "res://Assets/NPCs/royal_cartographer.png" },
+		{ "name": "The Kraken", "role": "Risk", "image": "res://Assets/NPCs/the_kraken.png" }
+	  ],
+	  "interactions": [ 
+		{
+		  "npc_role":"Client",
+		  "type": "dialogue",
+		  "text":"Captain: We need to reach the treasure before the Royal Navy! Show me the charts!"
+		}
+	  ]
+	},
+	{
+	  "id": "galactic_empire_compliance",
+	  "title": "Galactic Empire Compliance",
+	  "topic": "Interstellar Regulations",
+	  "difficulty": "High",
+	  "cost": 250,
+	  "reward_coins": 500,
+	  "npcs": [
+		 { "name": "Galactic Emperor", "role": "Client", "image": "res://Assets/NPCs/galactic_emperor.png" },
+		 { "name": "Order Architect", "role": "Architect", "image": "res://Assets/NPCs/order_architect.png" },
+		 { "name": "Imperial Auditor", "role": "Auditor", "image": "res://Assets/NPCs/imperial_auditor.png" },
+		 { "name": "Alien Diplomat", "role": "Stakeholder", "image": "res://Assets/NPCs/alien_diplomat.png" },
+		 { "name": "Freelance Smuggler", "role": "Vendor", "image": "res://Assets/NPCs/freelance_smuggler.png" },
+		 { "name": "Protocol Droid", "role": "Developer", "image": "res://Assets/NPCs/protocol_droid.png" },
+		 { "name": "Empire Trooper", "role": "Tester", "image": "res://Assets/NPCs/empire_trooper.png" },
+		 { "name": "Furry Co-Pilot", "role": "User", "image": "res://Assets/NPCs/furry_co-pilot.png" }
+	   ],
+	  "interactions": [
+		{
+		   "npc_role":"Client",
+		   "type": "dialogue",
+		   "text":"Emperor: This new regulation MUST be implemented across all systems. Ensure compliance."
+		}
+	  ]
+	}
   ]
 }
