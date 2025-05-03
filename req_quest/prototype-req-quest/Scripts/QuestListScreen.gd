@@ -4,7 +4,7 @@ extends Control
 
 # Références aux éléments UI (Assure-toi que ces chemins correspondent à ta scène !)
 # Si tu as suivi la structure précédente, ces chemins sont corrects.
-@onready var coins_label = $MainMargin/VerticalLayout/CoinDisplay/CoinsLabel
+@onready var coins_label = $MainMargin/VerticalLayout/CoinsLabel
 @onready var quest_list_container = $MainMargin/VerticalLayout/QuestScroll/QuestListContainer
 
 # =============================================================================

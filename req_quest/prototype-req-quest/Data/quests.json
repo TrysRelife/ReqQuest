@@ -1,146 +1,120 @@
 {
-  "quests": [
-	{
-	  "id": "the_wizards_spellbook",
-	  "title": "The Wizard's Spellbook",
-	  "topic": "Functional Requirements",
-	  "difficulty": "Easy",
-	  "cost": 0,
-	  "reward_coins": 50,
-	  "npcs": [
-		{
-		  "name": "Wizard Aldric",
-		  "role": "Client",
-		  "image": "res://Assets/NPCs/wizard.png" 
-		},
-		{
-		  "name": "Elara the Apprentice",
-		  "role": "Developer",
-		  "image": "res://Assets/NPCs/apprentice.png" 
-		},
-		{
-		  "name": "Ignis the Hatchling",
-		  "role": "Tester",
-		  "image": "res://Assets/NPCs/dragon.png" 
-		}
-	  ],
-	  "interactions": [ 
-		{
-		  "npc_role": "Client",
-		  "type": "dialogue",
-		  "text": "Wizard Aldric: Ah, there you are! I need a digital spellbook. First and foremost, it must allow me to... hmm... list my spells."
-		},
-		{
-		  "npc_role": "Client", 
-		  "type": "question",
-		  "text": "Wizard Aldric: To be useful, this spellbook MUST allow searching for a spell by its name. Is this a functional or non-functional requirement?",
-		  "options": [ "Functional...", "Non-Functional...", "A technical constraint..." ],
-		  "correct_index": 0,
-		  "points": 15
-		},
-		{
-		  "npc_role": "Developer", 
-		  "type": "question",
-		  "text": "Elara the Apprentice: Noted! But the Wizard also wants to add newly discovered spells. Which core system capability does this primarily involve?",
-		  "options": [ "Displaying existing spell details", "Saving the user's window layout", "Creating and editing spell data"],
-		  "correct_index": 2,
-		  "points": 20
-		},
-		{
-			"npc_role": "Tester", 
-			"type": "dialogue",
-			"text": "Ignis the Hatchling: *Puffs a small flame* Squeak! What if I try to search for a spell that doesn't exist? We need to check that!"
-		}
-	  ]
-	},
-	{
-	  "id": "ninja_stealth_mode",
-	  "title": "Ninja Stealth Mode",
-	  "topic": "Security Requirements",
-	  "difficulty": "Easy",
-	  "cost": 10,
-	  "reward_coins": 60,
-	  "npcs": [
-		{ "name": "Kage the Ninja", "role": "User", "image": "res://Assets/NPCs/ninja.png" },
-		{ "name": "Master Ishikawa", "role": "IT Admin", "image": "res://Assets/NPCs/sensei.png" },
-		{ "name": "Jin the Ronin Coder", "role": "Developer", "image": "res://Assets/NPCs/ronin.png" }
-	  ],
-	  "interactions": [
-		{
-		  "npc_role": "User",
-		  "type": "dialogue",
-		  "text": "Kage the Ninja: My plans must remain unseen..."
-		}
-	  ]
-	},
-	{
-	  "id": "castle_siege_defense",
-	  "title": "Castle Siege Defense",
-	  "topic": "Cross-Functional Coordination",
-	  "difficulty": "Medium",
-	  "cost": 75,
-	  "reward_coins": 150,
-	  "npcs": [
-		{ "name": "Knight Commander", "role": "Client", "image": "res://Assets/NPCs/knight_commander.png" },
-		{ "name": "Lead Archer", "role": "Developer", "image": "res://Assets/NPCs/lead_archer.png" },
-		{ "name": "Master Blacksmith", "role": "Tester", "image": "res://Assets/NPCs/master_blacksmith.png" },
-		{ "name": "Siege Wizard", "role": "Architect", "image": "res://Assets/NPCs/siege_wizard.png" },
-		{ "name": "Castle Spy", "role": "Stakeholder", "image": "res://Assets/NPCs/castle_spy.png" }
-	  ],
-	  "interactions": [
-		{
-		  "npc_role":"Client",
-		  "type": "dialogue",
-		  "text":"Commander: The walls must hold! What are your proposals?"
-		}
-	  ]
-	},
-	{
-	  "id": "pirate_ship_navigation",
-	  "title": "Pirate Ship Navigation",
-	  "topic": "System Integration",
-	  "difficulty": "Medium",
-	  "cost": 100,
-	  "reward_coins": 200,
-	  "npcs": [
-		{ "name": "Captain 'Storm' Rider", "role": "Client", "image": "res://Assets/NPCs/captain_storm_rider.png" },
-		{ "name": "Star Navigator", "role": "Developer", "image": "res://Assets/NPCs/star_navigator.png" },
-		{ "name": "Old Sailor", "role": "Tester", "image": "res://Assets/NPCs/old_sailor.png" },
-		{ "name": "Royal Cartographer", "role": "Analyst", "image": "res://Assets/NPCs/royal_cartographer.png" },
-		{ "name": "The Kraken", "role": "Risk", "image": "res://Assets/NPCs/the_kraken.png" }
-	  ],
-	  "interactions": [ 
-		{
-		  "npc_role":"Client",
-		  "type": "dialogue",
-		  "text":"Captain: We need to reach the treasure before the Royal Navy! Show me the charts!"
-		}
-	  ]
-	},
-	{
-	  "id": "galactic_empire_compliance",
-	  "title": "Galactic Empire Compliance",
-	  "topic": "Interstellar Regulations",
-	  "difficulty": "High",
-	  "cost": 250,
-	  "reward_coins": 500,
-	  "npcs": [
-		 { "name": "Galactic Emperor", "role": "Client", "image": "res://Assets/NPCs/galactic_emperor.png" },
-		 { "name": "Order Architect", "role": "Architect", "image": "res://Assets/NPCs/order_architect.png" },
-		 { "name": "Imperial Auditor", "role": "Auditor", "image": "res://Assets/NPCs/imperial_auditor.png" },
-		 { "name": "Alien Diplomat", "role": "Stakeholder", "image": "res://Assets/NPCs/alien_diplomat.png" },
-		 { "name": "Freelance Smuggler", "role": "Vendor", "image": "res://Assets/NPCs/freelance_smuggler.png" },
-		 { "name": "Protocol Droid", "role": "Developer", "image": "res://Assets/NPCs/protocol_droid.png" },
-		 { "name": "Empire Trooper", "role": "Tester", "image": "res://Assets/NPCs/empire_trooper.png" },
-		 { "name": "Furry Co-Pilot", "role": "User", "image": "res://Assets/NPCs/furry_co-pilot.png" }
-	   ],
-	  "interactions": [
-		{
-		   "npc_role":"Client",
-		   "type": "dialogue",
-		   "text":"Emperor: This new regulation MUST be implemented across all systems. Ensure compliance."
-		}
-	  ]
-	}
-  ]
-}
+	"quests": [
+	  {
+		"id": "the_wizards_spellbook",
+		"title": "The Wizard's Spellbook",
+		"topic": "Functional Requirements",
+		"difficulty": "Easy",
+		"cost": 0,
+		"reward_coins": 50,
+		"npcs": [
+		  { "name": "Wizard Aldric", "role": "Client", "image": "res://Assets/NPCs/wizard.png" },
+		  { "name": "Elara the Apprentice", "role": "Developer", "image": "res://Assets/NPCs/apprentice.png" },
+		  { "name": "Ignis the Hatchling", "role": "Tester", "image": "res://Assets/NPCs/dragon.png" }
+		],
+		"interactions": [
+
+		  { "npc_role": "Client", "type": "dialogue", "text": "Wizard Aldric: Ah, there you are! I need a digital spellbook. First and foremost, it must allow me to... hmm... list my spells." },
+		  { "npc_role": "Client", "type": "question", "text": "Wizard Aldric: To be useful, this spellbook MUST allow searching for a spell by its name. Is this a functional or non-functional requirement?", "options": ["Functional (what it does)", "Non-Functional (how well)", "A technical constraint"], "correct_index": 0, "points": 15 },
+	
+		  { "npc_role": "Developer", "type": "question", "text": "Elara the Apprentice: Noted! But the Wizard also wants to add new spells. What core capability does this involve?", "options": ["Reading spell details", "Saving user settings", "Creating/Editing spell data"], "correct_index": 2, "points": 20 },
+
+		  { "npc_role": "Tester", "type": "dialogue", "text": "Ignis the Hatchling: *Puffs flame* Squeak! What if I search for a spell that doesn't exist? Need to test that!" },
+		  { "npc_role": "Tester", "type": "question", "text": "Ignis asks: When testing 'spell not found', what are we primarily checking?", "options": ["Performance under load", "Correct error handling", "Visual appeal of error message"], "correct_index": 1, "points": 15 } 
+		]
+	  },
+	  {
+		"id": "ninja_stealth_mode",
+		"title": "Ninja Stealth Mode",
+		"topic": "Security Requirements",
+		"difficulty": "Easy",
+		"cost": 10,
+		"reward_coins": 60,
+		"npcs": [
+		  { "name": "Kage the Ninja", "role": "User", "image": "res://Assets/NPCs/ninja.png" },
+		  { "name": "Master Ishikawa", "role": "IT Admin", "image": "res://Assets/NPCs/sensei.png" },
+		  { "name": "Jin the Ronin Coder", "role": "Developer", "image": "res://Assets/NPCs/ronin.png" }
+		],
+		"interactions": [
+
+		  { "npc_role": "User", "type": "dialogue", "text": "Kage the Ninja: My plans must remain unseen... And if someone tries too many passwords?" },
+		   { "npc_role": "User", "type": "question", "text": "Kage asks: Locking an account after too many failed logins prevents what kind of attack?", "options": ["Phishing", "Brute-force", "SQL Injection"], "correct_index": 1, "points": 15 },
+
+		  { "npc_role": "IT Admin", "type": "question", "text": "Master Ishikawa: To ensure only Kage sees his messages, what's the first line of defense?", "options": ["A fast interface", "A strong password / login", "Message encryption"], "correct_index": 1, "points": 15 },
+
+		  { "npc_role": "Developer", "type": "question", "text": "Jin the Ronin Coder: Protecting the data itself with encryption relates to which security principle?", "options": ["Authentication", "Authorization", "Confidentiality"], "correct_index": 2, "points": 20 }
+		]
+	  },
+	  {
+		"id": "castle_siege_defense",
+		"title": "Castle Siege Defense",
+		"topic": "Cross-Functional Coordination",
+		"difficulty": "Medium",
+		"cost": 75,
+		"reward_coins": 150,
+		"npcs": [
+		  { "name": "Knight Commander", "role": "Client", "image": "res://Assets/NPCs/knight_commander.png" },
+		  { "name": "Lead Archer", "role": "Developer", "image": "res://Assets/NPCs/lead_archer.png" },
+		  { "name": "Master Blacksmith", "role": "Tester", "image": "res://Assets/NPCs/master_blacksmith.png" },
+		  { "name": "Siege Wizard", "role": "Architect", "image": "res://Assets/NPCs/siege_wizard.png" },
+		  { "name": "Castle Spy", "role": "Stakeholder", "image": "res://Assets/NPCs/castle_spy.png" }
+		],
+		"interactions": [
+		  { "npc_role": "Client", "type": "question", "text": "Knight Commander: The North Wall is failing! Which immediate action takes priority?", "options": ["Reinforce supports", "Counter-attack catapults", "Request wizard shield"], "correct_index": 1, "points": 20 },
+		  { "npc_role": "Architect", "type": "question", "text": "Siege Wizard: My barrier takes time. Focus on quick partial coverage or a slow full shield?", "options": ["Quick Partial Shield", "Slow Full Shield", "No Shield, use walls"], "correct_index": 1, "points": 25 },
+		  { "npc_role": "Developer", "type": "question", "text": "Lead Archer: We have fire arrows and heavy bolts for the armored trolls. Which is more critical NOW?", "options": ["Fire Arrows (Area)", "Heavy Bolts (Single target)", "Standard Arrows (Conserve)"], "correct_index": 1, "points": 25 },
+		  { "npc_role": "Tester", "type": "question", "text": "Master Blacksmith: The gate buckles under direct hits! What's the best immediate test for a fallback?", "options": ["Test inner portcullis", "Test boiling oil readiness", "Test escape tunnel access"], "correct_index": 0, "points": 20 },
+		  { "npc_role": "Stakeholder", "type": "question", "text": "Castle Spy: Sappers target the West tower tonight. What's the most crucial info to relay FIRST?", "options": ["Exact timing", "Number of sappers", "Type of explosives"], "correct_index": 0, "points": 25 }
+		]
+	  },
+	   {
+		"id": "pirate_ship_navigation",
+		"title": "Pirate Ship Navigation",
+		"topic": "System Integration",
+		"difficulty": "Medium",
+		"cost": 100,
+		"reward_coins": 200,
+		"npcs": [
+		  { "name": "Captain 'Storm' Rider", "role": "Client", "image": "res://Assets/NPCs/captain_storm_rider.png" },
+		  { "name": "Star Navigator", "role": "Developer", "image": "res://Assets/NPCs/star_navigator.png" },
+		  { "name": "Old Sailor", "role": "Tester", "image": "res://Assets/NPCs/old_sailor.png" },
+		  { "name": "Royal Cartographer", "role": "Analyst", "image": "res://Assets/NPCs/royal_cartographer.png" },
+		  { "name": "The Kraken", "role": "Risk", "image": "res://Assets/NPCs/the_kraken.png" }
+		],
+		"interactions": [
+		  { "npc_role":"Client", "type": "question", "text":"Captain: Charts show reefs AND Navy patrols! Which system integration is MOST critical?", "options": ["Weather integration", "Depth sounder integration", "Enemy vessel tracking"], "correct_index": 2, "points": 25 },
+		  { "npc_role":"Developer", "type": "question", "text":"Star Navigator: Integrating the ancient astrolabe with the new compass requires a custom API. What's key for success?", "options": ["Fast performance", "Clear data format", "Low power usage"], "correct_index": 1, "points": 20 },
+		  { "npc_role":"Tester", "type": "question", "text":"Old Sailor: Arr! The new helm feels sluggish in a storm! What non-functional aspect failed testing?", "options": ["Reliability", "Responsiveness (Latency)", "Security"], "correct_index": 1, "points": 20 },
+		  { "npc_role":"Analyst", "type": "question", "text":"Royal Cartographer: Analyzing intercepted Navy codes suggests a pincer move. Which system needs this data urgently?", "options": ["Cannon targeting", "Route planning", "Crew scheduling"], "correct_index": 1, "points": 25 },
+		  { "npc_role": "Risk", "type": "question", "text": "The Kraken stirs... Which integrated system helps us detect its approach SOONEST?", "options": ["Crow's nest lookout feed", "Sonar/Depth integration", "Magical disturbance sensor"], "correct_index": 1, "points": 30 }
+		]
+	  },
+	  {
+		"id": "galactic_empire_compliance",
+		"title": "Galactic Empire Compliance",
+		"topic": "Interstellar Regulations",
+		"difficulty": "High",
+		"cost": 250,
+		"reward_coins": 500,
+		"npcs": [
+		   { "name": "Galactic Emperor", "role": "Client", "image": "res://Assets/NPCs/galactic_emperor.png" },
+		   { "name": "Order Architect", "role": "Architect", "image": "res://Assets/NPCs/order_architect.png" },
+		   { "name": "Imperial Auditor", "role": "Auditor", "image": "res://Assets/NPCs/imperial_auditor.png" },
+		   { "name": "Alien Diplomat", "role": "Stakeholder", "image": "res://Assets/NPCs/alien_diplomat.png" },
+		   { "name": "Freelance Smuggler", "role": "Vendor", "image": "res://Assets/NPCs/freelance_smuggler.png" },
+		   { "name": "Protocol Droid", "role": "Developer", "image": "res://Assets/NPCs/protocol_droid.png" },
+		   { "name": "Empire Trooper", "role": "Tester", "image": "res://Assets/NPCs/empire_trooper.png" },
+		   { "name": "Furry Co-Pilot", "role": "User", "image": "res://Assets/NPCs/furry_co-pilot.png" }
+		 ],
+		"interactions": [
+		   { "npc_role": "Client", "type": "question", "text":"Emperor: Decree 77-B MUST be implemented. What's the biggest obstacle?", "options": ["Cost", "Technical challenge", "Vendor resistance"], "correct_index": 1, "points": 40 },
+		   { "npc_role": "Architect", "type": "question", "text": "Order Architect: Integrating masking needs core system changes. Accept minor nav-drift or delay for full recalibration?", "options": ["Accept Minor Drift", "Delay for Recalibration", "Ignore Decree"], "correct_index": 1, "points": 50 },
+		   { "npc_role": "Developer", "type": "question", "text": "Protocol Droid: Energy protocols conflict with the masking generator. Which takes precedence?", "options": ["Energy Regulation", "Masking Generator", "Develop Adapter"], "correct_index": 2, "points": 50 },
+		   { "npc_role": "Auditor", "type": "question", "text": "Imperial Auditor: How to verify compliance? Random scans or mandatory automated reporting?", "options": ["Random Scans", "Automated Reporting", "Voluntary Compliance"], "correct_index": 1, "points": 50 },
+		   { "npc_role": "Stakeholder", "type": "question", "text": "Alien Diplomat: Our trade routes are affected! The primary requirement for our couriers is?", "options": ["Speed", "Stealth (Exemption)", "Cargo capacity"], "correct_index": 1, "points": 45 },
+		   { "npc_role": "Vendor", "type": "question", "text": "Freelance Smuggler: Heh. Masking tech... price depends on quality. Need top-tier untraceable or just 'good enough'?", "options": ["Top-Tier (Expensive)", "'Good Enough' (Cheaper)", "Report Smuggler to ISB"], "correct_index": 1, "points": 40 }, 
+		   { "npc_role": "User", "type": "question", "text": "Furry Co-Pilot: Rrrrrrr-ghghghg! (Translation: Navicomputer sounds funny! Is this a usability, performance, or critical functional bug?)", "options": ["Usability", "Performance", "Critical Functionality"], "correct_index": 0, "points": 40 } 
+		 ]
+	   }
+	]
+  }

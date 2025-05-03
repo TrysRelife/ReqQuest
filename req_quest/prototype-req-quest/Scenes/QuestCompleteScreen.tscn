@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://v8osimdfkoa5"]
+
+[ext_resource type="Script" uid="uid://qiwjcc7t0abq" path="res://Scripts/QuestCompleteScreen.gd" id="1_gk6vw"]
+[ext_resource type="Texture2D" uid="uid://dvstg4w3iedns" path="res://Assets/quest_list_background.png" id="2_dehnq"]
+
+[node name="QuestCompleteScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gk6vw")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_dehnq")
+expand_mode = 4
+
+[node name="MainMargin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -17.0
+offset_right = 10.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 204
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 20
+
+[node name="VerticalLayout" type="VBoxContainer" parent="MainMargin"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="TitleLabel" type="Label" parent="MainMargin/VerticalLayout"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.470792, 0.231298, 1.92523e-07, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 38
+text = "\"Quest Complete!\""
+horizontal_alignment = 1
+
+[node name="ResultsLabel" type="Label" parent="MainMargin/VerticalLayout"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "PLACEHOLDER"
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="MainMargin/VerticalLayout"]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+text = "Back to Quest List"

@@ -43,17 +43,29 @@ func unlock_quest(quest_id: String):
 func mark_quest_completed(quest_id: String):
 	if not quest_id in completed_quests: completed_quests.append(quest_id)
 
+# Dans GameState.gd
+
 func start_quest(quest_id: String):
 	current_quest_id = quest_id
 	var quest_definition = get_quest_data(quest_id)
-	if quest_definition.is_empty(): printerr("ERREUR: Tentative de démarrer quête inconnue: ", quest_id); return
+	if quest_definition.is_empty():
+		printerr("ERREUR: Tentative de démarrer quête inconnue: ", quest_id); return
+
+	# Important : FAIRE LA COPIE AVANT de réinitialiser les autres variables
 	current_quest_runtime_data = quest_definition.duplicate(true)
-	current_interaction_index = 0 # Réinitialise l'index au début de la quête
+
+	# Réinitialisations
+	current_interaction_index = 0
 	interacted_npcs = []
 	current_quest_score = 0
 	current_interaction_data = {}
-	# --- DEBUG LOG ---
-	print("GameState.start_quest: Quête '%s' démarrée. Index mis à %d." % [quest_id, current_interaction_index])
+
+	# --- NOUVEAU LOG ---
+	var interactions_loaded = current_quest_runtime_data.get("interactions", [])
+	print("GameState.start_quest: Quête '%s' démarrée. Index=%d. Nombre d'interactions chargées=%d" % [quest_id, current_interaction_index, interactions_loaded.size()])
+	if interactions_loaded.is_empty():
+		printerr("GameState.start_quest: ATTENTION - Aucune interaction trouvée dans les données chargées pour cette quête!")
+	# --- FIN NOUVEAU LOG ---
 
 func get_current_quest_npcs() -> Array: return current_quest_runtime_data.get("npcs", [])
 
