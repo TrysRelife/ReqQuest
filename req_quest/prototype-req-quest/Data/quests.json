@@ -88,7 +88,30 @@
 		  { "npc_role":"Analyst", "type": "question", "text":"Royal Cartographer: Analyzing intercepted Navy codes suggests a pincer move. Which system needs this data urgently?", "options": ["Cannon targeting", "Route planning", "Crew scheduling"], "correct_index": 1, "points": 25 },
 		  { "npc_role": "Risk", "type": "question", "text": "The Kraken stirs... Which integrated system helps us detect its approach SOONEST?", "options": ["Crow's nest lookout feed", "Sonar/Depth integration", "Magical disturbance sensor"], "correct_index": 1, "points": 30 }
 		]
-	  },
+	  }, 
+	   {
+      		"id": "timekeepers_dilemma",
+     		"title": "The Timekeeper’s Dilemma",
+      		"topic": "Performance & Scalability",
+      		"difficulty": "Medium-High",
+      		"cost": 125,
+     		"reward_coins": 240,
+     		"npcs": [
+       		 { "name": "Chrono Master Veyla", "role": "Client", "image": "res://Assets/NPCs/chrono_master.png" },
+        	 { "name": "Techno-Smith Ronar", "role": "Developer", "image": "res://Assets/NPCs/techno_smith.png" },
+        	 { "name": "Time Auditor Nox", "role": "Tester", "image": "res://Assets/NPCs/time_auditor.png" },
+        	 { "name": "Elder Byte", "role": "Architect", "image": "res://Assets/NPCs/elder_byte.png" },
+	 	 { "name": "Swarm of Users", "role": "User", "image": "res://Assets/NPCs/data_swarm.png" }
+      		],
+      		"interactions": [
+        	 { "npc_role": "Client", "type": "dialogue", "text": "Chrono Master Veyla: Our time-sync system fails when too many connect at once. We need real-time performance!" },
+        	 { "npc_role": "Client", "type": "question", "text": "Veyla asks: The ability to serve 10,000 users without delay is a...?", "options": ["Security requirement", "Scalability requirement", "Functional requirement"], "correct_index": 1, "points": 25 },
+       		 { "npc_role": "Developer", "type": "question", "text": "Techno-Smith Ronar: I can shard the temporal logs. What's the benefit?", "options": ["Faster query performance", "Higher encryption", "Cleaner UI layout"], "correct_index": 0, "points": 30 },
+       		 { "npc_role": "Tester", "type": "question", "text": "Time Auditor Nox: Load tests show spikes at 3 PM each cycle. What should we test next?", "options": ["Concurrent connection limits", "User interface themes", "Report download accuracy"], "correct_index": 0, "points": 25 },
+       		 { "npc_role": "Architect", "type": "question", "text": "Elder Byte: Should we optimize the core engine or add caching layers first?", "options": ["Optimize core engine", "Add caching first", "Do both at once"], "correct_index": 1, "points": 35 },
+       		 { "npc_role": "User", "type": "question", "text": "Swarm of Users: The system lags during rituals! What non-functional concern is unmet?", "options": ["Responsiveness", "Accuracy", "Security"], "correct_index": 0, "points": 25 }
+     		 ]
+   	 },
 	  {
 		"id": "galactic_empire_compliance",
 		"title": "Galactic Empire Compliance",
