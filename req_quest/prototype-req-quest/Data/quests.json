@@ -1,120 +1,112 @@
 {
-	"quests": [
-	  {
-		"id": "the_wizards_spellbook",
-		"title": "The Wizard's Spellbook",
-		"topic": "Functional Requirements",
-		"difficulty": "Easy",
-		"cost": 0,
-		"reward_coins": 50,
-		"npcs": [
-		  { "name": "Wizard Aldric", "role": "Client", "image": "res://Assets/NPCs/wizard.png" },
-		  { "name": "Elara the Apprentice", "role": "Developer", "image": "res://Assets/NPCs/apprentice.png" },
-		  { "name": "Ignis the Hatchling", "role": "Tester", "image": "res://Assets/NPCs/dragon.png" }
-		],
-		"interactions": [
-
-		  { "npc_role": "Client", "type": "dialogue", "text": "Wizard Aldric: Ah, there you are! I need a digital spellbook. First and foremost, it must allow me to... hmm... list my spells." },
-		  { "npc_role": "Client", "type": "question", "text": "Wizard Aldric: To be useful, this spellbook MUST allow searching for a spell by its name. Is this a functional or non-functional requirement?", "options": ["Functional (what it does)", "Non-Functional (how well)", "A technical constraint"], "correct_index": 0, "points": 15 },
-	
-		  { "npc_role": "Developer", "type": "question", "text": "Elara the Apprentice: Noted! But the Wizard also wants to add new spells. What core capability does this involve?", "options": ["Reading spell details", "Saving user settings", "Creating/Editing spell data"], "correct_index": 2, "points": 20 },
-
-		  { "npc_role": "Tester", "type": "dialogue", "text": "Ignis the Hatchling: *Puffs flame* Squeak! What if I search for a spell that doesn't exist? Need to test that!" },
-		  { "npc_role": "Tester", "type": "question", "text": "Ignis asks: When testing 'spell not found', what are we primarily checking?", "options": ["Performance under load", "Correct error handling", "Visual appeal of error message"], "correct_index": 1, "points": 15 } 
-		]
-	  },
-	  {
-		"id": "ninja_stealth_mode",
-		"title": "Ninja Stealth Mode",
-		"topic": "Security Requirements",
-		"difficulty": "Easy",
-		"cost": 10,
-		"reward_coins": 60,
-		"npcs": [
-		  { "name": "Kage the Ninja", "role": "User", "image": "res://Assets/NPCs/ninja.png" },
-		  { "name": "Master Ishikawa", "role": "IT Admin", "image": "res://Assets/NPCs/sensei.png" },
-		  { "name": "Jin the Ronin Coder", "role": "Developer", "image": "res://Assets/NPCs/ronin.png" }
-		],
-		"interactions": [
-
-		  { "npc_role": "User", "type": "dialogue", "text": "Kage the Ninja: My plans must remain unseen... And if someone tries too many passwords?" },
-		   { "npc_role": "User", "type": "question", "text": "Kage asks: Locking an account after too many failed logins prevents what kind of attack?", "options": ["Phishing", "Brute-force", "SQL Injection"], "correct_index": 1, "points": 15 },
-
-		  { "npc_role": "IT Admin", "type": "question", "text": "Master Ishikawa: To ensure only Kage sees his messages, what's the first line of defense?", "options": ["A fast interface", "A strong password / login", "Message encryption"], "correct_index": 1, "points": 15 },
-
-		  { "npc_role": "Developer", "type": "question", "text": "Jin the Ronin Coder: Protecting the data itself with encryption relates to which security principle?", "options": ["Authentication", "Authorization", "Confidentiality"], "correct_index": 2, "points": 20 }
-		]
-	  },
-	  {
-		"id": "castle_siege_defense",
-		"title": "Castle Siege Defense",
-		"topic": "Cross-Functional Coordination",
-		"difficulty": "Medium",
-		"cost": 75,
-		"reward_coins": 150,
-		"npcs": [
-		  { "name": "Knight Commander", "role": "Client", "image": "res://Assets/NPCs/knight_commander.png" },
-		  { "name": "Lead Archer", "role": "Developer", "image": "res://Assets/NPCs/lead_archer.png" },
-		  { "name": "Master Blacksmith", "role": "Tester", "image": "res://Assets/NPCs/master_blacksmith.png" },
-		  { "name": "Siege Wizard", "role": "Architect", "image": "res://Assets/NPCs/siege_wizard.png" },
-		  { "name": "Castle Spy", "role": "Stakeholder", "image": "res://Assets/NPCs/castle_spy.png" }
-		],
-		"interactions": [
-		  { "npc_role": "Client", "type": "question", "text": "Knight Commander: The North Wall is failing! Which immediate action takes priority?", "options": ["Reinforce supports", "Counter-attack catapults", "Request wizard shield"], "correct_index": 1, "points": 20 },
-		  { "npc_role": "Architect", "type": "question", "text": "Siege Wizard: My barrier takes time. Focus on quick partial coverage or a slow full shield?", "options": ["Quick Partial Shield", "Slow Full Shield", "No Shield, use walls"], "correct_index": 1, "points": 25 },
-		  { "npc_role": "Developer", "type": "question", "text": "Lead Archer: We have fire arrows and heavy bolts for the armored trolls. Which is more critical NOW?", "options": ["Fire Arrows (Area)", "Heavy Bolts (Single target)", "Standard Arrows (Conserve)"], "correct_index": 1, "points": 25 },
-		  { "npc_role": "Tester", "type": "question", "text": "Master Blacksmith: The gate buckles under direct hits! What's the best immediate test for a fallback?", "options": ["Test inner portcullis", "Test boiling oil readiness", "Test escape tunnel access"], "correct_index": 0, "points": 20 },
-		  { "npc_role": "Stakeholder", "type": "question", "text": "Castle Spy: Sappers target the West tower tonight. What's the most crucial info to relay FIRST?", "options": ["Exact timing", "Number of sappers", "Type of explosives"], "correct_index": 0, "points": 25 }
-		]
-	  },
-	   {
-		"id": "pirate_ship_navigation",
-		"title": "Pirate Ship Navigation",
-		"topic": "System Integration",
-		"difficulty": "Medium",
-		"cost": 100,
-		"reward_coins": 200,
-		"npcs": [
-		  { "name": "Captain 'Storm' Rider", "role": "Client", "image": "res://Assets/NPCs/captain_storm_rider.png" },
-		  { "name": "Star Navigator", "role": "Developer", "image": "res://Assets/NPCs/star_navigator.png" },
-		  { "name": "Old Sailor", "role": "Tester", "image": "res://Assets/NPCs/old_sailor.png" },
-		  { "name": "Royal Cartographer", "role": "Analyst", "image": "res://Assets/NPCs/royal_cartographer.png" },
-		  { "name": "The Kraken", "role": "Risk", "image": "res://Assets/NPCs/the_kraken.png" }
-		],
-		"interactions": [
-		  { "npc_role":"Client", "type": "question", "text":"Captain: Charts show reefs AND Navy patrols! Which system integration is MOST critical?", "options": ["Weather integration", "Depth sounder integration", "Enemy vessel tracking"], "correct_index": 2, "points": 25 },
-		  { "npc_role":"Developer", "type": "question", "text":"Star Navigator: Integrating the ancient astrolabe with the new compass requires a custom API. What's key for success?", "options": ["Fast performance", "Clear data format", "Low power usage"], "correct_index": 1, "points": 20 },
-		  { "npc_role":"Tester", "type": "question", "text":"Old Sailor: Arr! The new helm feels sluggish in a storm! What non-functional aspect failed testing?", "options": ["Reliability", "Responsiveness (Latency)", "Security"], "correct_index": 1, "points": 20 },
-		  { "npc_role":"Analyst", "type": "question", "text":"Royal Cartographer: Analyzing intercepted Navy codes suggests a pincer move. Which system needs this data urgently?", "options": ["Cannon targeting", "Route planning", "Crew scheduling"], "correct_index": 1, "points": 25 },
-		  { "npc_role": "Risk", "type": "question", "text": "The Kraken stirs... Which integrated system helps us detect its approach SOONEST?", "options": ["Crow's nest lookout feed", "Sonar/Depth integration", "Magical disturbance sensor"], "correct_index": 1, "points": 30 }
-		]
-	  },
-	  {
-		"id": "galactic_empire_compliance",
-		"title": "Galactic Empire Compliance",
-		"topic": "Interstellar Regulations",
-		"difficulty": "High",
-		"cost": 250,
-		"reward_coins": 500,
-		"npcs": [
-		   { "name": "Galactic Emperor", "role": "Client", "image": "res://Assets/NPCs/galactic_emperor.png" },
-		   { "name": "Order Architect", "role": "Architect", "image": "res://Assets/NPCs/order_architect.png" },
-		   { "name": "Imperial Auditor", "role": "Auditor", "image": "res://Assets/NPCs/imperial_auditor.png" },
-		   { "name": "Alien Diplomat", "role": "Stakeholder", "image": "res://Assets/NPCs/alien_diplomat.png" },
-		   { "name": "Freelance Smuggler", "role": "Vendor", "image": "res://Assets/NPCs/freelance_smuggler.png" },
-		   { "name": "Protocol Droid", "role": "Developer", "image": "res://Assets/NPCs/protocol_droid.png" },
-		   { "name": "Empire Trooper", "role": "Tester", "image": "res://Assets/NPCs/empire_trooper.png" },
-		   { "name": "Furry Co-Pilot", "role": "User", "image": "res://Assets/NPCs/furry_co-pilot.png" }
-		 ],
-		"interactions": [
-		   { "npc_role": "Client", "type": "question", "text":"Emperor: Decree 77-B MUST be implemented. What's the biggest obstacle?", "options": ["Cost", "Technical challenge", "Vendor resistance"], "correct_index": 1, "points": 40 },
-		   { "npc_role": "Architect", "type": "question", "text": "Order Architect: Integrating masking needs core system changes. Accept minor nav-drift or delay for full recalibration?", "options": ["Accept Minor Drift", "Delay for Recalibration", "Ignore Decree"], "correct_index": 1, "points": 50 },
-		   { "npc_role": "Developer", "type": "question", "text": "Protocol Droid: Energy protocols conflict with the masking generator. Which takes precedence?", "options": ["Energy Regulation", "Masking Generator", "Develop Adapter"], "correct_index": 2, "points": 50 },
-		   { "npc_role": "Auditor", "type": "question", "text": "Imperial Auditor: How to verify compliance? Random scans or mandatory automated reporting?", "options": ["Random Scans", "Automated Reporting", "Voluntary Compliance"], "correct_index": 1, "points": 50 },
-		   { "npc_role": "Stakeholder", "type": "question", "text": "Alien Diplomat: Our trade routes are affected! The primary requirement for our couriers is?", "options": ["Speed", "Stealth (Exemption)", "Cargo capacity"], "correct_index": 1, "points": 45 },
-		   { "npc_role": "Vendor", "type": "question", "text": "Freelance Smuggler: Heh. Masking tech... price depends on quality. Need top-tier untraceable or just 'good enough'?", "options": ["Top-Tier (Expensive)", "'Good Enough' (Cheaper)", "Report Smuggler to ISB"], "correct_index": 1, "points": 40 }, 
-		   { "npc_role": "User", "type": "question", "text": "Furry Co-Pilot: Rrrrrrr-ghghghg! (Translation: Navicomputer sounds funny! Is this a usability, performance, or critical functional bug?)", "options": ["Usability", "Performance", "Critical Functionality"], "correct_index": 0, "points": 40 } 
-		 ]
-	   }
-	]
-  }
+  "quests": [
+	{
+	  "id": "superhero_comms_failure",
+	  "title": "Superhero Comms Failure",
+	  "topic": "Real-Time Requirements & Reliability",
+	  "difficulty": "Medium",
+	  "cost": 75,
+	  "reward_coins": 150,
+	  "npcs": [
+		{ "name": "Captain Comet", "role": "Superhero User", "image": "res://Assets/NPCs/superhero.png" },
+		{ "name": "Gizmo (Sidekick)", "role": "Developer", "image": "res://Assets/NPCs/cyborg.png" },
+		{ "name": "Dr. Mayhem (Villain)", "role": "External Tester/Threat", "image": "res://Assets/NPCs/vampire.png" }
+	  ],
+	  "interactions": [
+		{ "npc_role": "Superhero User", "type": "dialogue", "text": "Captain Comet: My comm-link to the Justice Brigade keeps cutting out mid-battle! This is unacceptable!" },
+		{ "npc_role": "Superhero User", "type": "question", "text": "Captain Comet: For a hero's comms, what's the MOST critical non-functional requirement during a crisis?", "options": ["Low latency (no delay)", "Cool sound effects", "Power efficiency"], "correct_index": 0, "points": 25 },
+		{ "npc_role": "Developer", "type": "dialogue", "text": "Gizmo: I've analyzed the logs, Captain. The signal drops when you're near Dr. Mayhem's jamming tech." },
+		{ "npc_role": "Developer", "type": "question", "text": "Gizmo: To counter the jamming, should I prioritize signal strength, frequency hopping, or a fallback carrier pigeon protocol?", "options": ["Carrier Pigeon (Retro!)", "Frequency Hopping (Agile)", "Signal Strength (Brute force)"], "correct_index": 1, "points": 30 },
+		{ "npc_role": "External Tester/Threat", "type": "dialogue", "text": "Dr. Mayhem (over a crackly line): Mwahaha! Your pitiful comms are no match for my genius! Soon, silence will reign!" },
+		{ "npc_role": "External Tester/Threat", "type": "question", "text": "Dr. Mayhem sneers: If your system *must* fail, what's the 'graceful degradation' requirement for a hero's comms?", "options": ["Explode spectacularly", "Switch to text-only mode", "Play annoying hold music"], "correct_index": 1, "points": 25 }
+	  ]
+	},
+	{
+	  "id": "elf_forest_portal_glitch",
+	  "title": "Elf Forest Portal Glitch",
+	  "topic": "Accessibility & Usability",
+	  "difficulty": "Easy",
+	  "cost": 20,
+	  "reward_coins": 70,
+	  "npcs": [
+		{ "name": "Elder Elara", "role": "Client/Elder User", "image": "res://Assets/NPCs/elfe.png" },
+		{ "name": "Faelan the Artificer", "role": "Developer", "image": "res://Assets/NPCs/cyborg.png" },
+		{ "name": "Grizelda the Goblin", "role": "Non-Typical User/Tester", "image": "res://Assets/NPCs/alien.png" }
+	  ],
+	  "interactions": [
+		{ "npc_role": "Client/Elder User", "type": "dialogue", "text": "Elder Elara: Young one, our ancient forest portal is behaving erratically. Some of our kin find it difficult to activate." },
+		{ "npc_role": "Client/Elder User", "type": "question", "text": "Elder Elara: For a portal used by elves of all ages, what accessibility feature is paramount for activation?", "options": ["Requires rare moon-petal", "Simple, clear visual cues", "Complex runic incantation"], "correct_index": 1, "points": 15 },
+		{ "npc_role": "Developer", "type": "dialogue", "text": "Faelan: I've examined the portal matrix. The activation sequence uses very faint light patterns, hard for some to discern." },
+		{ "npc_role": "Developer", "type": "question", "text": "Faelan: To improve usability for all, should I add auditory cues, haptic feedback, or make the light patterns brighter and larger?", "options": ["Make it brighter/larger", "Add auditory cues", "All of the above (Best UX)"], "correct_index": 2, "points": 20 },
+		{ "npc_role": "Non-Typical User/Tester", "type": "dialogue", "text": "Grizelda: Me try portal! *Whacks it with a stick* Not working for Grizelda! Too many fiddly bits!" },
+		{ "npc_role": "Non-Typical User/Tester", "type": "question", "text": "Grizelda asks: If portal only works for tiny elf fingers, what basic usability principle is violated?", "options": ["Aesthetics", "Learnability", "Error tolerance / Robustness"], "correct_index": 1, "points": 15 }
+	  ]
+	},
+	{
+	  "id": "witch_potion_automation",
+	  "title": "Witch's Potion Automation",
+	  "topic": "Automation & Process Requirements",
+	  "difficulty": "Medium",
+	  "cost": 80,
+	  "reward_coins": 160,
+	  "npcs": [
+		{ "name": "Hecate the Hedge-Witch", "role": "Client/User", "image": "res://Assets/NPCs/witch.png" },
+		{ "name": "Imp a.k.a. 'Fixit'", "role": "Developer", "image": "res://Assets/NPCs/robot.png" },
+		{ "name": "Grumble the Familiar", "role": "Tester/QA", "image": "res://Assets/NPCs/dragon.png" }
+	  ],
+	  "interactions": [
+		{ "npc_role": "Client/User", "type": "dialogue", "text": "Hecate: Stirring these flight potions by hand is tedious! I need an automated cauldron stirrer, Fixit!" },
+		{ "npc_role": "Client/User", "type": "question", "text": "Hecate: The stirrer MUST stop if the potion bubbles over. This is what type of requirement?", "options": ["Performance requirement", "Safety requirement", "User interface requirement"], "correct_index": 1, "points": 20 },
+		{ "npc_role": "Developer", "type": "dialogue", "text": "Fixit: Bleep-boop! Automated stirring sequence initiated. Sensors calibrated for optimal swirl velocity and temperature monitoring." },
+		{ "npc_role": "Developer", "type": "question", "text": "Fixit: For complex potion recipes, is it better to define the entire stir-heat-cool sequence as one macro, or allow step-by-step control?", "options": ["One Macro (Simple to run)", "Step-by-step (Flexible)", "No automation, keep stirring!"], "correct_index": 1, "points": 25 },
+		{ "npc_role": "Tester/QA", "type": "dialogue", "text": "Grumble: *Sniffs the cauldron, then sneezes green smoke* The 'auto-add newt eye' function just added a toadstool! Bad Fixit!" },
+		{ "npc_role": "Tester/QA", "type": "question", "text": "Grumble grumbles: If the automated system adds the wrong ingredient, what's the primary requirement failure?", "options": ["It wasn't fast enough", "Incorrect process execution", "The cauldron isn't shiny"], "correct_index": 1, "points": 20 }
+	  ]
+	},
+	{
+	  "id": "zombie_survival_app",
+	  "title": "Zombie Survival App",
+	  "topic": "Data Management & Reliability",
+	  "difficulty": "Medium",
+	  "cost": 90,
+	  "reward_coins": 180,
+	  "npcs": [
+		{ "name": "Survivor Sarah", "role": "User", "image": "res://Assets/NPCs/cyborg.png" },
+		{ "name": "Dr. Zomboss (Reluctant Helper)", "role": "Data Source/SME", "image": "res://Assets/NPCs/zombie.png" },
+		{ "name": "Rusty the Robot", "role": "System Developer", "image": "res://Assets/NPCs/robot.png" }
+	  ],
+	  "interactions": [
+		{ "npc_role": "User", "type": "dialogue", "text": "Sarah: We need an app to track safe zones, supply caches, and zombie herd movements. Our lives depend on accurate data!" },
+		{ "npc_role": "User", "type": "question", "text": "Sarah: If the app shows a 'safe zone' that's actually overrun, what critical data quality attribute has failed?", "options": ["Timeliness", "Accuracy", "Completeness"], "correct_index": 1, "points": 25 },
+		{ "npc_role": "Data Source/SME", "type": "dialogue", "text": "Dr. Zomboss: Groooan... My... research... indicates... herd... X... moves... south... at... dusk... mostly." },
+		{ "npc_role": "Data Source/SME", "type": "question", "text": "Dr. Zomboss moans: The data on zombie 'moods' is... unreliable. Should the app display it with a warning, or omit it entirely?", "options": ["Display with warning (User decides)", "Omit (Avoid misinformation)", "Display as 100% accurate"], "correct_index": 0, "points": 20 },
+		{ "npc_role": "System Developer", "type": "dialogue", "text": "Rusty: Data integrity checks implemented. Offline map caching enabled for when the network inevitably goes down. Redundancy protocols active." },
+		{ "npc_role": "System Developer", "type": "question", "text": "Rusty: To ensure data is current, how often should the app attempt to sync with the (hopefully) surviving central server?", "options": ["Every second (Drains battery)", "Once a day (Too slow)", "Every 15-30 minutes (Balanced)"], "correct_index": 2, "points": 25 }
+	  ]
+	},
+	{
+	  "id": "alien_first_contact_protocol",
+	  "title": "Alien First Contact Protocol",
+	  "topic": "Ambiguity Clarification & Internationalization",
+	  "difficulty": "High",
+	  "cost": 200,
+	  "reward_coins": 450,
+	  "npcs": [
+		{ "name": "Ambassador Zorp", "role": "Alien Client", "image": "res://Assets/NPCs/alien2.png" },
+		{ "name": "Xeno-Linguist Lexi", "role": "Developer/Analyst", "image": "res://Assets/NPCs/elfe.png" }, 
+		{ "name": "Unit 734 (Translation Droid)", "role": "Tool/System", "image": "res://Assets/NPCs/robot.png" },
+		{ "name": "Admiral Straker", "role": "Human Stakeholder", "image": "res://Assets/NPCs/superhero.png" } 
+	  ],
+	  "interactions": [
+		{ "npc_role": "Alien Client", "type": "dialogue", "text": "Ambassador Zorp: Greetings, Earthling. Your 'greeting' protocols are... confusing. We require a system for unambiguous communication." },
+		{ "npc_role": "Alien Client", "type": "question", "text": "Ambassador Zorp: Our gesture for 'agreement' involves triple-blinking our lower eyelids. Your system MUST recognize this. This is a requirement related to:", "options": ["Performance", "Input method localization", "Security"], "correct_index": 1, "points": 40 },
+		{ "npc_role": "Developer/Analyst", "type": "dialogue", "text": "Lexi: Ambassador, the phrase 'let's table this' has multiple meanings in English. We need to define context for the translation engine." },
+		{ "npc_role": "Developer/Analyst", "type": "question", "text": "Lexi: To handle idiomatic expressions, should the translation system use a direct word-for-word approach or a meaning-based (semantic) approach?", "options": ["Word-for-word (Fast, error-prone)", "Meaning-based (Slower, more accurate)", "Translate only numbers"], "correct_index": 1, "points": 50 },
+		{ "npc_role": "Tool/System", "type": "dialogue", "text": "Unit 734: Processing... Ambiguity detected in term 'cool'. Options: low temperature, socially approved, calm demeanor. Please clarify context for Zorpian translation." },
+		{ "npc_role": "Tool/System", "type": "question", "text": "Unit 734: If a Zorpian phrase has no direct Earth equivalent, what is the BEST fallback for the translation system?", "options": ["Output 'TRANSLATION ERROR'", "Provide closest literal words + cultural note", "Guess based on sentiment analysis"], "correct_index": 1, "points": 45 },
+		{ "npc_role": "Human Stakeholder", "type": "dialogue", "text": "Admiral Straker: This communication must be flawless. Any misunderstanding could lead to... significant interstellar incidents." },
+		{ "npc_role": "Human Stakeholder", "type": "question", "text": "Admiral Straker: What is the maximum acceptable delay (latency) for real-time translation during critical diplomatic negotiations?", "options": ["Several minutes", "Under 1 second", "10-20 seconds"], "correct_index": 1, "points": 40 }
+	  ]
+	}
+  ]
+}
