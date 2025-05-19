@@ -22,7 +22,6 @@ GameState="*res://Scripts/GameState.gd"
 
 window/size/viewport_width=720
 window/size/viewport_height=1600
-window/size/borderless=true
 window/handheld/orientation=1
 
 [dotnet]
@@ -35,4 +34,5 @@ enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [rendering]
 
-renderer/rendering_method="mobile"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
